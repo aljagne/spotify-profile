@@ -77,7 +77,7 @@ app.get('/callback', (req, res) => {
           expires_in,
         });
 
-        res.redirect(`http://localhost:3000/?${queryParams}`);
+        res.redirect(`http://172.19.165.90:3000/?${queryParams}`);
 
       } else {
         res.redirect(`/?${querystring.stringify({ error: 'invalid_token' })}`);
@@ -114,5 +114,5 @@ app.get('/refresh_token', (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Express app listening at http://localhost:${port}`);
+  console.log(`Express app listening at http://172.19.165.90:${port}`);
 });

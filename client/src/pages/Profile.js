@@ -35,6 +35,7 @@ const Profile = () => {
       setTopTracks(userTopTracks.data);
     };
 
+
     catchErrors(fetchData());
   }, []);
 
